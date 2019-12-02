@@ -1,5 +1,8 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-*, :after, :before { box-sizing: border-box; }
+
+*, :after, :before {
+  box-sizing: border-box;
+}
 
 /*
  BARVY
@@ -7,37 +10,128 @@
  Jedeme retro cernobile, dnes barvy nepotrebujeme.
 */
 
-
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    font-family: 'Merriweather', serif;
-    font-size: 16px;
-    line-height: 1.6;
+  margin: 0;
+  background-color: #f5f5f5;
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
+h2 {
+  padding: 60px 0 30px 10px;
+}
+
+p {
+  padding: 15px;
+}
 
 /* HLAVICKA */
 
 .titulek {
-    font-family: 'Raleway', serif;
+  font-family: 'Raleway', serif;
 }
 
+.hlavicka {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/island-hlavicka.jpg);
+  background-size: cover;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.autor {
+  font-style: italic;
+  border-top: 1px solid white;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px 0px;
+}
 
 /* MENU */
 
+ul {
+  text-align: center;
+  list-style: none;
+  text-transform: uppercase;
+  font-family: 'Raleway', serif;
+}
 
+ul a {
+  text-decoration: none;
+}
 
+a {
+  color: grey;
+}
 
 /* OBSAH */
 
+img {
+  max-width: 100%;
+}
 
+.popisek, .popisek-gal {
+  margin: 0;
+  text-align: center;
+  color: grey;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 0 0 20px 0;
+}
 
+.popisek-copy {
+  font-weight: normal;
+}
 
 /* FOTOGALERIE */
 
 
 
-
 /* PATICKA */
+
+.paticka {
+  color: grey;
+  -webkit-box-shadow: inset 1px 24px 11px -5px rgba(232, 232, 232, 1);
+  -moz-box-shadow: inset 1px 24px 11px -5px rgba(232, 232, 232, 1);
+  box-shadow: inset 1px 24px 11px -5px rgba(232, 232, 232, 1);
+  padding: 30px;
+  font-size: 12px;
+}
+
+@media (min-width: 500px) {
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  ul a {
+    color: grey;
+  }
+  .popisek {
+    position: relative;
+    float: right;
+    margin: -30px 20px 30px;
+    color: white;
+    z-index: 2;
+  }
+  a {
+    color: white;
+    
+  }
+  .foto {
+    display: flex;
+    float: left;
+    width: 50%;
+  }
+
+  .galerie p {
+    display: none;
+  }
+
+  .popisek-gal {
+    display: none;
+  }
+}
