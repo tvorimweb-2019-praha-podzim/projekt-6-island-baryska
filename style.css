@@ -18,6 +18,16 @@ body {
   line-height: 1.6;
 }
 
+.obsah {
+  padding: 30px;
+}
+
+h1 {
+  font-size: 70px;
+  padding: 0;
+  margin-bottom: 0;
+}
+
 h2 {
   padding: 60px 0 30px 10px;
 }
@@ -57,6 +67,10 @@ ul {
   font-family: 'Raleway', serif;
 }
 
+li {
+  padding: 5px;
+}
+
 ul a {
   text-decoration: none;
 }
@@ -86,8 +100,6 @@ img {
 
 /* FOTOGALERIE */
 
-
-
 /* PATICKA */
 
 .paticka {
@@ -99,14 +111,18 @@ img {
   font-size: 12px;
 }
 
-@media (min-width: 500px) {
+.paticka p {
+  margin:0;
+  padding: 0;
+}
 
+
+@media (min-width: 500px) {
   ul {
     display: flex;
     justify-content: space-around;
     padding: 0;
   }
-
   ul a {
     color: grey;
   }
@@ -119,19 +135,89 @@ img {
   }
   a {
     color: white;
-    
+  }
+  .galerie {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
   }
   .foto {
     display: flex;
-    float: left;
     width: 50%;
   }
-
   .galerie p {
     display: none;
   }
-
   .popisek-gal {
     display: none;
   }
 }
+
+.paticka a {
+  color: grey;
+}
+
+h2::after {
+  content:""; 
+  background-color: rgb(98, 177, 241);
+  width: 100px;
+  height: 5px;
+  display: block;
+  margin-left: -40px;
+  margin-top: 20px;
+}
+
+
+
+@media (min-width: 800px) {
+  .foto {
+    display: flex;
+    width: 33.333%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .obsah {
+    width: 960px;
+    margin: -80px auto;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 11px 2px rgba(163,158,163,1);
+-moz-box-shadow: 0px 0px 11px 2px rgba(163,158,163,1);
+box-shadow: 0px 0px 11px 2px rgba(163,158,163,1);
+  }
+
+  .hlavicka {
+    min-height: 500px;
+  }
+
+  .perex {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  .menu {
+    float: left;
+  }
+
+  .uvod {
+    padding: 30px 30px 30px 250px;
+  }
+
+  ul {
+    display: block;
+    padding: 40px;
+    text-align: left;
+}
+  li {
+    padding: 10px;
+  }
+
+  .proc {
+    padding-right: 200px;
+  }
+
+  .videt {
+    padding-left: 200px;
+  }
+}
+
